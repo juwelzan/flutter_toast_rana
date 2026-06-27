@@ -1,0 +1,1 @@
+enum ToastPositionType { top, center, bottom }
