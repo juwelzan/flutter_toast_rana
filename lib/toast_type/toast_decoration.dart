@@ -4,6 +4,7 @@ class ToastDecoration {
   final BlendMode? blendMode;
   final Gradient? gradient;
   final double borderRadius;
+  final EdgeInsetsGeometry? padding, margin;
   final BoxBorder? border;
   final DecorationImage? decorationImage;
   final Color? color;
@@ -17,5 +18,7 @@ class ToastDecoration {
     this.decorationImage,
     this.color,
     this.boxShadow,
+    this.padding,
+    this.margin,
   });
 }

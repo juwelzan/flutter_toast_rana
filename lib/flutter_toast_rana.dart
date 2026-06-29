@@ -1,15 +1,76 @@
-import 'package:flutter_toast_rana/domain/toast_domain.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_toast_rana/core/assets/assets.dart';
+import 'package:flutter_toast_rana/core/theme/toast_theme.dart';
 
-class FlutterToastRana implements ToastDomain {
-  @override
-  void error() {}
+import 'package:flutter_toast_rana/toast/overlay_toast.dart';
+import 'package:flutter_toast_rana/toast_type/toast_enum_type.dart';
 
-  @override
-  void info() {}
+class FlutterToastRana {
+  static void error({
+    required BuildContext context,
+    ErrorIcon errorIcon = .dizzy,
+    MassagePositionType massagePositionType = .top,
+    MassageShowType massageShowType = .bubbleSlide,
+    MassageSlide massageSlide = .none,
+  }) {
+    OverlayToast.show(
+      context: context,
+      toastColorScheme: ToastTheme.error,
+      icon: errorIcon.path,
+      massagePosition: massagePositionType,
+      massageShowType: massageShowType,
+      massageSlide: massageSlide,
+    );
+  }
 
-  @override
-  void success() {}
+  void info({
+    required BuildContext context,
+    ErrorIcon errorIcon = .dizzy,
+    MassagePositionType massagePositionType = .top,
+    MassageShowType massageShowType = .bubbleSlide,
+    MassageSlide massageSlide = .none,
+  }) {
+    OverlayToast.show(
+      context: context,
+      toastColorScheme: ToastTheme.info,
+      icon: errorIcon.path,
+      massagePosition: massagePositionType,
+      massageShowType: massageShowType,
+      massageSlide: massageSlide,
+    );
+  }
 
-  @override
-  void warning() {}
+  void success({
+    required BuildContext context,
+    ErrorIcon errorIcon = .dizzy,
+    MassagePositionType massagePositionType = .top,
+    MassageShowType massageShowType = .bubbleSlide,
+    MassageSlide massageSlide = .none,
+  }) {
+    OverlayToast.show(
+      context: context,
+      toastColorScheme: ToastTheme.success,
+      icon: errorIcon.path,
+      massagePosition: massagePositionType,
+      massageShowType: massageShowType,
+      massageSlide: massageSlide,
+    );
+  }
+
+  void warning({
+    required BuildContext context,
+    ErrorIcon errorIcon = .dizzy,
+    MassagePositionType massagePositionType = .top,
+    MassageShowType massageShowType = .bubbleSlide,
+    MassageSlide massageSlide = .none,
+  }) {
+    OverlayToast.show(
+      context: context,
+      toastColorScheme: ToastTheme.warning,
+      icon: errorIcon.path,
+      massagePosition: massagePositionType,
+      massageShowType: massageShowType,
+      massageSlide: massageSlide,
+    );
+  }
 }

@@ -1,0 +1,64 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
+import '../core/theme/toast_theme.dart';
+
+class ToastChild extends StatelessWidget {
+  final double width;
+  final String icon;
+  final ToastColorScheme toastColorScheme;
+  const ToastChild({
+    super.key,
+    required this.width,
+    required this.toastColorScheme,
+    required this.icon,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Container(
+          margin: EdgeInsets.all(10),
+
+          padding: EdgeInsets.all(10),
+          width: 60,
+          height: 60,
+          decoration: BoxDecoration(
+            color: toastColorScheme.primary,
+            borderRadius: BorderRadius.all(Radius.elliptical(13, 13)),
+          ),
+          child: SvgPicture.asset(
+            icon,
+            width: 50,
+            height: 60,
+            colorFilter: ColorFilter.mode(toastColorScheme.icon, .srcIn),
+          ),
+        ),
+        const SizedBox(width: 10),
+        Column(
+          mainAxisAlignment: .spaceEvenly,
+          crossAxisAlignment: .start,
+          children: [
+            Text(
+              "Title",
+              style: TextStyle(
+                fontSize: 20,
+                color: toastColorScheme.text,
+                fontWeight: .bold,
+              ),
+            ),
+            Text(
+              "Massage",
+              style: TextStyle(
+                fontSize: 14,
+                color: toastColorScheme.text,
+                fontWeight: .w400,
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
