@@ -25,7 +25,7 @@ class FlutterToastRana {
 
   static void info({
     required BuildContext context,
-    ErrorIcon errorIcon = .dizzy,
+    InfoIcon infoIcon = .faceMonocle,
     MassagePositionType massagePositionType = .top,
     MassageShowType massageShowType = .bubbleSlide,
     MassageSlide massageSlide = .none,
@@ -33,7 +33,7 @@ class FlutterToastRana {
     OverlayToast.show(
       context: context,
       toastColorScheme: ToastTheme.info,
-      icon: errorIcon.path,
+      icon: infoIcon.path,
       massagePosition: massagePositionType,
       massageShowType: massageShowType,
       massageSlide: massageSlide,
@@ -42,7 +42,7 @@ class FlutterToastRana {
 
   static void success({
     required BuildContext context,
-    ErrorIcon errorIcon = .dizzy,
+    SuccessIcon successIcon = .faceSmileHearts,
     MassagePositionType massagePositionType = .top,
     MassageShowType massageShowType = .bubbleSlide,
     MassageSlide massageSlide = .none,
@@ -50,7 +50,7 @@ class FlutterToastRana {
     OverlayToast.show(
       context: context,
       toastColorScheme: ToastTheme.success,
-      icon: errorIcon.path,
+      icon: successIcon.path,
       massagePosition: massagePositionType,
       massageShowType: massageShowType,
       massageSlide: massageSlide,
@@ -59,7 +59,7 @@ class FlutterToastRana {
 
   static void warning({
     required BuildContext context,
-    ErrorIcon errorIcon = .dizzy,
+    WarningIcon warningIcon = .faceHushed,
     MassagePositionType massagePositionType = .top,
     MassageShowType massageShowType = .bubbleSlide,
     MassageSlide massageSlide = .none,
@@ -67,7 +67,7 @@ class FlutterToastRana {
     OverlayToast.show(
       context: context,
       toastColorScheme: ToastTheme.warning,
-      icon: errorIcon.path,
+      icon: warningIcon.path,
       massagePosition: massagePositionType,
       massageShowType: massageShowType,
       massageSlide: massageSlide,
