@@ -23,7 +23,7 @@ class FlutterToastRana {
     );
   }
 
-  void info({
+  static void info({
     required BuildContext context,
     ErrorIcon errorIcon = .dizzy,
     MassagePositionType massagePositionType = .top,
@@ -40,7 +40,7 @@ class FlutterToastRana {
     );
   }
 
-  void success({
+  static void success({
     required BuildContext context,
     ErrorIcon errorIcon = .dizzy,
     MassagePositionType massagePositionType = .top,
@@ -57,7 +57,7 @@ class FlutterToastRana {
     );
   }
 
-  void warning({
+  static void warning({
     required BuildContext context,
     ErrorIcon errorIcon = .dizzy,
     MassagePositionType massagePositionType = .top,
