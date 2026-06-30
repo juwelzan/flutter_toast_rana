@@ -9,6 +9,7 @@ import 'package:flutter_toast_rana/widget/toast_child.dart';
 class Massage extends StatelessWidget {
   final ToastColorScheme toastColorScheme;
   final MassagePositionType massagePositionType;
+  final Widget? child;
   final ToastDecoration toastDecoration;
   final double verticalPadding;
   final String icon;
@@ -23,6 +24,7 @@ class Massage extends StatelessWidget {
     required this.toastDecoration,
     required this.toastConfigure,
     required this.icon,
+    this.child,
   });
 
   @override
@@ -31,11 +33,13 @@ class Massage extends StatelessWidget {
       massagePositionType: massagePositionType,
       verticalPadding: verticalPadding,
       toastDecoration: toastDecoration,
-      toastChild: ToastChild(
-        width: toastConfigure.height,
-        toastColorScheme: toastColorScheme,
-        icon: icon,
-      ),
+      toastChild:
+          child ??
+          ToastChild(
+            width: toastDecoration.height,
+            toastColorScheme: toastColorScheme,
+            icon: icon,
+          ),
 
       toastConfigure: toastConfigure,
       onEnd: onEnd,

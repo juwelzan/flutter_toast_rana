@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_toast_rana/core/theme/toast_theme.dart';
 import 'package:flutter_toast_rana/massage_position/widget/massage_position_widget.dart';
 import 'package:flutter_toast_rana/toast_type/toast_configure.dart';
+import 'package:flutter_toast_rana/toast_type/toast_decoration.dart';
 import 'package:flutter_toast_rana/toast_type/toast_enum_type.dart';
 
 class MassagePosition extends StatelessWidget {
@@ -9,7 +10,11 @@ class MassagePosition extends StatelessWidget {
   final MassageShowType? massageShowType;
   final MassageSlide? massageSlide;
   final ToastColorScheme toastColorScheme;
+  final ToastDecoration? toastDecoration;
+  final Duration? animation, toStand;
   final VoidCallback onEnd;
+  final double? verticalPadding;
+  final Widget? child;
   final String icon;
   const MassagePosition({
     super.key,
@@ -19,6 +24,11 @@ class MassagePosition extends StatelessWidget {
     required this.icon,
     this.massageShowType,
     this.massageSlide,
+    this.child,
+    this.verticalPadding,
+    this.toastDecoration,
+    this.animation,
+    this.toStand,
   });
 
   @override
@@ -50,12 +60,18 @@ class MassagePosition extends StatelessWidget {
               : massageShowType == .fade
               ? false
               : false,
+          animation: animation,
+          toStand: toStand,
         ),
 
         toastColorScheme: toastColorScheme,
+        verticalPadding: verticalPadding,
+        toastDecoration: toastDecoration,
+
         onEnd: onEnd,
         massagePositionType: .top,
         icon: icon,
+        child: child,
       ),
 
       MassagePositionType.center => MassagePositionWidget(
@@ -87,13 +103,18 @@ class MassagePosition extends StatelessWidget {
               : massageShowType == .fade
               ? false
               : false,
+          animation: animation,
+          toStand: toStand,
         ),
 
         toastColorScheme: toastColorScheme,
+        toastDecoration: toastDecoration,
+        verticalPadding: verticalPadding,
 
         onEnd: onEnd,
         massagePositionType: .center,
         icon: icon,
+        child: child,
       ),
 
       MassagePositionType.bottom => MassagePositionWidget(
@@ -122,11 +143,16 @@ class MassagePosition extends StatelessWidget {
               : massageShowType == .fade
               ? false
               : false,
+          animation: animation,
+          toStand: toStand,
         ),
         toastColorScheme: toastColorScheme,
         onEnd: onEnd,
         massagePositionType: .bottom,
         icon: icon,
+        toastDecoration: toastDecoration,
+        verticalPadding: verticalPadding,
+        child: child,
       ),
     };
   }

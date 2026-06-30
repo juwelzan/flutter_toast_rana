@@ -7,20 +7,20 @@ import 'package:flutter_toast_rana/toast_type/toast_enum_type.dart';
 
 class ToastGestureConfigure extends StatefulWidget {
   final VoidCallback onEnd;
-  final Widget? toastChild;
+  final Widget toastChild;
   final double verticalPadding;
 
   final MassagePositionType massagePositionType;
   final ToastConfigure toastConfigure;
-  final ToastDecoration? toastDecoration;
+  final ToastDecoration toastDecoration;
   const ToastGestureConfigure({
     super.key,
     required this.onEnd,
     required this.toastConfigure,
     this.massagePositionType = .top,
     this.verticalPadding = 60,
-    this.toastDecoration,
-    this.toastChild,
+    required this.toastDecoration,
+    required this.toastChild,
   });
 
   @override
@@ -286,9 +286,9 @@ class _ToastGestureConfigureState extends State<ToastGestureConfigure>
             crossAxisAlignment: .center,
             children: [
               SizedBox(
-                height: widget.toastConfigure.height + 10,
+                height: widget.toastDecoration.height + 10,
 
-                width: widget.toastConfigure.width ?? double.infinity,
+                width: widget.toastDecoration.width ?? double.infinity,
                 child: Center(
                   child: RootToastWidget(
                     onEnd: () {

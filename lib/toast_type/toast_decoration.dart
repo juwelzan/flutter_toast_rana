@@ -9,6 +9,8 @@ class ToastDecoration {
   final DecorationImage? decorationImage;
   final Color? color;
   final List<BoxShadow>? boxShadow;
+  final double? width;
+  final double height;
 
   ToastDecoration({
     this.blendMode,
@@ -20,5 +22,7 @@ class ToastDecoration {
     this.boxShadow,
     this.padding,
     this.margin,
+    this.width,
+    this.height = 60,
   });
 }

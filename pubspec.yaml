@@ -1,7 +1,8 @@
 name: flutter_toast_rana
-description: "A new Flutter project."
-version: 0.0.1
-homepage:
+description: "A beautiful, customizable, and lightweight Flutter toast package with built-in swipe-to-dismiss support."
+version: 1.0.0
+homepage: https://github.com/juwelzan/flutter_toast_rana.git
+license: MIT
 
 environment:
   sdk: ^3.12.2

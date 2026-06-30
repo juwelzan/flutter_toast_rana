@@ -10,6 +10,7 @@ class MassagePositionWidget extends StatelessWidget {
   final VoidCallback onEnd;
   final MassagePositionType massagePositionType;
   final double? verticalPadding;
+  final Widget? child;
   final ToastDecoration? toastDecoration;
   final ToastConfigure toastConfigure;
 
@@ -23,6 +24,7 @@ class MassagePositionWidget extends StatelessWidget {
     this.toastDecoration,
     required this.toastConfigure,
     required this.icon,
+    this.child,
   });
 
   @override
@@ -46,6 +48,7 @@ class MassagePositionWidget extends StatelessWidget {
           ),
       toastConfigure: toastConfigure,
       icon: icon,
+      child: child,
     );
   }
 }

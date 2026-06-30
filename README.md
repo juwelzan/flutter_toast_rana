@@ -1,4 +1,4 @@
-# 🍞 Smart Toast
+# 🍞 Flutter Toast Rana
 
 A beautiful, customizable, and lightweight Flutter toast package with built-in swipe-to-dismiss support.
 
@@ -59,7 +59,7 @@ import 'package:flutter_toast_rana/flutter_toast_rana.dart';
 # 💡 Basic Usage
 
 ```dart
-SmartToast.show(
+FlutterToastRana.show(
   context: context,
   message: "Profile updated successfully!",
 );
@@ -72,7 +72,7 @@ SmartToast.show(
 ### Success
 
 ```dart
-SmartToast.success(
+FlutterToastRana.success(
   context: context,
   message: "Operation completed successfully.",
 );
@@ -83,7 +83,7 @@ SmartToast.success(
 ### Error
 
 ```dart
-SmartToast.error(
+FlutterToastRana.error(
   context: context,
   message: "Something went wrong.",
 );
@@ -94,7 +94,7 @@ SmartToast.error(
 ### Warning
 
 ```dart
-SmartToast.warning(
+FlutterToastRana.warning(
   context: context,
   message: "Please check your input.",
 );
@@ -105,7 +105,7 @@ SmartToast.warning(
 ### Info
 
 ```dart
-SmartToast.info(
+FlutterToastRana.info(
   context: context,
   message: "New update is available.",
 );
@@ -130,7 +130,7 @@ Customize your toast easily.
 Example:
 
 ```dart
-FlutterToastRana.show(
+FlutterToastRana.info(
   context: context,
   message: "Hello Flutter!",
   duration: Duration(seconds: 3),

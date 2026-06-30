@@ -7,12 +7,12 @@ class RootToastWidget extends StatefulWidget {
   final Widget? toastChild;
   final ToastConfigure toastConfigure;
   final VoidCallback onEnd;
-  final ToastDecoration? toastDecoration;
+  final ToastDecoration toastDecoration;
   const RootToastWidget({
     super.key,
     this.toastConfigure = const ToastConfigure(),
     required this.onEnd,
-    this.toastDecoration,
+    required this.toastDecoration,
     this.toastChild,
   });
 
@@ -160,17 +160,17 @@ class _RootToastWidget extends State<RootToastWidget>
               child: Opacity(
                 opacity: _widgetOpacity.value,
                 child: RootHelperWidget(
-                  toastDecoration: widget.toastDecoration ?? ToastDecoration(),
+                  toastDecoration: widget.toastDecoration,
                   size: size,
-                  width: widget.toastConfigure.width,
-                  height: widget.toastConfigure.height,
+                  width: widget.toastDecoration.width,
+                  height: widget.toastDecoration.height,
                   sizeTween: _size.value,
                   opacityTween: _showWidgetOpacity.value,
                   isSlide: widget.toastConfigure.isSlide,
                   bubble: widget.toastConfigure.bubble,
                   widgetShow: _isShowWidget.value,
                   borderRadiusTween: _borderRadius.value,
-                  borderRadius: widget.toastConfigure.borderRadius,
+                  borderRadius: widget.toastDecoration.borderRadius,
                   child: widget.toastChild,
                 ),
               ),

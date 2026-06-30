@@ -3,6 +3,7 @@ import 'package:flutter_toast_rana/core/assets/assets.dart';
 import 'package:flutter_toast_rana/core/theme/toast_theme.dart';
 
 import 'package:flutter_toast_rana/toast/overlay_toast.dart';
+import 'package:flutter_toast_rana/toast_type/toast_decoration.dart';
 import 'package:flutter_toast_rana/toast_type/toast_enum_type.dart';
 
 class FlutterToastRana {
@@ -12,6 +13,11 @@ class FlutterToastRana {
     MassagePositionType massagePositionType = .top,
     MassageShowType massageShowType = .bubbleSlide,
     MassageSlide massageSlide = .none,
+    Widget? child,
+    Duration? animation,
+    Duration? toStand,
+    double? verticalPadding,
+    ToastDecoration? toastDecoration,
   }) {
     OverlayToast.show(
       context: context,
@@ -20,6 +26,11 @@ class FlutterToastRana {
       massagePosition: massagePositionType,
       massageShowType: massageShowType,
       massageSlide: massageSlide,
+      animation: animation,
+      child: child,
+      toStand: toStand,
+      toastDecoration: toastDecoration,
+      verticalPadding: verticalPadding,
     );
   }
 
@@ -29,6 +40,11 @@ class FlutterToastRana {
     MassagePositionType massagePositionType = .top,
     MassageShowType massageShowType = .bubbleSlide,
     MassageSlide massageSlide = .none,
+    Widget? child,
+    Duration? animation,
+    Duration? toStand,
+    double? verticalPadding,
+    ToastDecoration? toastDecoration,
   }) {
     OverlayToast.show(
       context: context,
@@ -37,6 +53,11 @@ class FlutterToastRana {
       massagePosition: massagePositionType,
       massageShowType: massageShowType,
       massageSlide: massageSlide,
+      animation: animation,
+      child: child,
+      toStand: toStand,
+      toastDecoration: toastDecoration,
+      verticalPadding: verticalPadding,
     );
   }
 
@@ -46,6 +67,11 @@ class FlutterToastRana {
     MassagePositionType massagePositionType = .top,
     MassageShowType massageShowType = .bubbleSlide,
     MassageSlide massageSlide = .none,
+    Widget? child,
+    Duration? animation,
+    Duration? toStand,
+    double? verticalPadding,
+    ToastDecoration? toastDecoration,
   }) {
     OverlayToast.show(
       context: context,
@@ -54,6 +80,11 @@ class FlutterToastRana {
       massagePosition: massagePositionType,
       massageShowType: massageShowType,
       massageSlide: massageSlide,
+      animation: animation,
+      child: child,
+      toStand: toStand,
+      toastDecoration: toastDecoration,
+      verticalPadding: verticalPadding,
     );
   }
 
@@ -63,6 +94,11 @@ class FlutterToastRana {
     MassagePositionType massagePositionType = .top,
     MassageShowType massageShowType = .bubbleSlide,
     MassageSlide massageSlide = .none,
+    Widget? child,
+    Duration? animation,
+    Duration? toStand,
+    double? verticalPadding,
+    ToastDecoration? toastDecoration,
   }) {
     OverlayToast.show(
       context: context,
@@ -71,6 +107,11 @@ class FlutterToastRana {
       massagePosition: massagePositionType,
       massageShowType: massageShowType,
       massageSlide: massageSlide,
+      animation: animation,
+      child: child,
+      toStand: toStand,
+      toastDecoration: toastDecoration,
+      verticalPadding: verticalPadding,
     );
   }
 }
