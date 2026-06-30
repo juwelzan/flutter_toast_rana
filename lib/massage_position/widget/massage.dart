@@ -13,6 +13,8 @@ class Massage extends StatelessWidget {
   final ToastDecoration toastDecoration;
   final double verticalPadding;
   final String icon;
+  final String? massage, title;
+  final TextStyle? massageStyle, titleStyle;
   final ToastConfigure toastConfigure;
   final VoidCallback onEnd;
   const Massage({
@@ -25,6 +27,10 @@ class Massage extends StatelessWidget {
     required this.toastConfigure,
     required this.icon,
     this.child,
+    this.massage,
+    this.title,
+    this.massageStyle,
+    this.titleStyle,
   });
 
   @override
@@ -39,6 +45,10 @@ class Massage extends StatelessWidget {
             width: toastDecoration.height,
             toastColorScheme: toastColorScheme,
             icon: icon,
+            massage: massage,
+            massageStyle: massageStyle,
+            title: title,
+            titleStyle: titleStyle,
           ),
 
       toastConfigure: toastConfigure,

@@ -13,6 +13,8 @@ class MassagePositionWidget extends StatelessWidget {
   final Widget? child;
   final ToastDecoration? toastDecoration;
   final ToastConfigure toastConfigure;
+  final String? massage, title;
+  final TextStyle? massageStyle, titleStyle;
 
   final String icon;
   const MassagePositionWidget({
@@ -25,6 +27,10 @@ class MassagePositionWidget extends StatelessWidget {
     required this.toastConfigure,
     required this.icon,
     this.child,
+    this.massage,
+    this.title,
+    this.massageStyle,
+    this.titleStyle,
   });
 
   @override
@@ -48,6 +54,10 @@ class MassagePositionWidget extends StatelessWidget {
           ),
       toastConfigure: toastConfigure,
       icon: icon,
+      massage: massage,
+      massageStyle: massageStyle,
+      title: title,
+      titleStyle: titleStyle,
       child: child,
     );
   }

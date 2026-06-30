@@ -16,6 +16,8 @@ class MassagePosition extends StatelessWidget {
   final double? verticalPadding;
   final Widget? child;
   final String icon;
+  final String? massage, title;
+  final TextStyle? massageStyle, titleStyle;
   const MassagePosition({
     super.key,
     required this.positionType,
@@ -29,6 +31,10 @@ class MassagePosition extends StatelessWidget {
     this.toastDecoration,
     this.animation,
     this.toStand,
+    this.massage,
+    this.title,
+    this.massageStyle,
+    this.titleStyle,
   });
 
   @override
@@ -71,6 +77,10 @@ class MassagePosition extends StatelessWidget {
         onEnd: onEnd,
         massagePositionType: .top,
         icon: icon,
+        massage: massage,
+        massageStyle: massageStyle,
+        title: title,
+        titleStyle: titleStyle,
         child: child,
       ),
 
@@ -114,6 +124,10 @@ class MassagePosition extends StatelessWidget {
         onEnd: onEnd,
         massagePositionType: .center,
         icon: icon,
+        massage: massage,
+        massageStyle: massageStyle,
+        title: title,
+        titleStyle: titleStyle,
         child: child,
       ),
 
@@ -152,6 +166,10 @@ class MassagePosition extends StatelessWidget {
         icon: icon,
         toastDecoration: toastDecoration,
         verticalPadding: verticalPadding,
+        massage: massage,
+        massageStyle: massageStyle,
+        title: title,
+        titleStyle: titleStyle,
         child: child,
       ),
     };

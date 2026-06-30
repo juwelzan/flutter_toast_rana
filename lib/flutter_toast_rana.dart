@@ -18,6 +18,10 @@ class FlutterToastRana {
     Duration? toStand,
     double? verticalPadding,
     ToastDecoration? toastDecoration,
+    String? massage,
+    String? title,
+    TextStyle? massageStyle,
+    TextStyle? titleStyle,
   }) {
     OverlayToast.show(
       context: context,
@@ -31,6 +35,10 @@ class FlutterToastRana {
       toStand: toStand,
       toastDecoration: toastDecoration,
       verticalPadding: verticalPadding,
+      massage: massage,
+      massageStyle: massageStyle,
+      title: title,
+      titleStyle: titleStyle,
     );
   }
 
@@ -45,6 +53,10 @@ class FlutterToastRana {
     Duration? toStand,
     double? verticalPadding,
     ToastDecoration? toastDecoration,
+    String? massage,
+    String? title,
+    TextStyle? massageStyle,
+    TextStyle? titleStyle,
   }) {
     OverlayToast.show(
       context: context,
@@ -58,6 +70,10 @@ class FlutterToastRana {
       toStand: toStand,
       toastDecoration: toastDecoration,
       verticalPadding: verticalPadding,
+      massage: massage,
+      massageStyle: massageStyle,
+      title: title,
+      titleStyle: titleStyle,
     );
   }
 
@@ -72,6 +88,10 @@ class FlutterToastRana {
     Duration? toStand,
     double? verticalPadding,
     ToastDecoration? toastDecoration,
+    String? massage,
+    String? title,
+    TextStyle? massageStyle,
+    TextStyle? titleStyle,
   }) {
     OverlayToast.show(
       context: context,
@@ -85,6 +105,10 @@ class FlutterToastRana {
       toStand: toStand,
       toastDecoration: toastDecoration,
       verticalPadding: verticalPadding,
+      massage: massage,
+      massageStyle: massageStyle,
+      title: title,
+      titleStyle: titleStyle,
     );
   }
 
@@ -99,6 +123,10 @@ class FlutterToastRana {
     Duration? toStand,
     double? verticalPadding,
     ToastDecoration? toastDecoration,
+    String? massage,
+    String? title,
+    TextStyle? massageStyle,
+    TextStyle? titleStyle,
   }) {
     OverlayToast.show(
       context: context,
@@ -112,6 +140,10 @@ class FlutterToastRana {
       toStand: toStand,
       toastDecoration: toastDecoration,
       verticalPadding: verticalPadding,
+      massage: massage,
+      massageStyle: massageStyle,
+      title: title,
+      titleStyle: titleStyle,
     );
   }
 }

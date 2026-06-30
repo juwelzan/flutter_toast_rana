@@ -19,6 +19,10 @@ class OverlayToast {
     Widget? child,
     ToastDecoration? toastDecoration,
     double? verticalPadding,
+    String? massage,
+    String? title,
+    TextStyle? massageStyle,
+    TextStyle? titleStyle,
   }) {
     if (overlayEntry != null) {
       overlayEntry?.remove();
@@ -40,6 +44,10 @@ class OverlayToast {
         massageShowType: massageShowType,
         massageSlide: massageSlide,
         icon: icon,
+        massage: massage,
+        massageStyle: massageStyle,
+        title: title,
+        titleStyle: titleStyle,
         child: child,
       ),
     );
