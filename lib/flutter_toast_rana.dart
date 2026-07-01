@@ -1,4 +1,5 @@
 import 'package:flutter_toast_rana/core/path/path.dart';
+export 'package:flutter_toast_rana/core/path/path.dart';
 
 class FlutterToastRana {
   static void error({
