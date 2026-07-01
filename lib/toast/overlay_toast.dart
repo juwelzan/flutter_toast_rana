@@ -2,6 +2,7 @@ import 'package:flutter_toast_rana/core/path/path.dart';
 
 class OverlayToast {
   const OverlayToast._();
+  static List overlayStateLength = [];
 
   static void show({
     required BuildContext context,
@@ -33,6 +34,12 @@ class OverlayToast {
         toastColorScheme: toastColorScheme,
         onEnd: () {
           overlayEntry.remove();
+          if (overlayStateLength.length > 1) {
+            overlayStateLength.removeAt(0);
+          }
+          debugPrint(
+            "overlayStateLength remove length ${overlayStateLength.length}",
+          );
         },
         massageShowType: massageShowType,
         massageSlide: massageSlide,
@@ -44,6 +51,8 @@ class OverlayToast {
         child: child,
       ),
     );
+    overlayStateLength.add(1);
+    debugPrint("overlayStateLength Add length ${overlayStateLength.length}");
 
     overlayState.insert(overlayEntry);
   }
