@@ -2,7 +2,7 @@ import 'package:flutter_toast_rana/core/path/path.dart';
 
 class OverlayToast {
   const OverlayToast._();
-  static OverlayEntry? overlayEntry;
+
   static void show({
     required BuildContext context,
     required ToastColorScheme toastColorScheme,
@@ -20,9 +20,7 @@ class OverlayToast {
     TextStyle? massageStyle,
     TextStyle? titleStyle,
   }) {
-    if (overlayEntry != null) {
-      overlayEntry?.remove();
-    }
+    late OverlayEntry overlayEntry;
     OverlayState overlayState = Overlay.of(context);
 
     overlayEntry = OverlayEntry(
@@ -34,8 +32,7 @@ class OverlayToast {
         verticalPadding: verticalPadding,
         toastColorScheme: toastColorScheme,
         onEnd: () {
-          overlayEntry?.remove();
-          overlayEntry = null;
+          overlayEntry.remove();
         },
         massageShowType: massageShowType,
         massageSlide: massageSlide,
@@ -48,6 +45,6 @@ class OverlayToast {
       ),
     );
 
-    overlayState.insert(overlayEntry!);
+    overlayState.insert(overlayEntry);
   }
 }
