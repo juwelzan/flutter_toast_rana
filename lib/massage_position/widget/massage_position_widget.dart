@@ -40,18 +40,28 @@ class MassagePositionWidget extends StatelessWidget {
       onEnd: onEnd,
       massagePositionType: massagePositionType,
       verticalPadding: verticalPadding ?? 20,
-      toastDecoration:
-          toastDecoration ??
-          ToastDecoration(
-            border: Border.all(width: 2, color: toastColorScheme.border),
-            boxShadow: [
+      toastDecoration: ToastDecoration(
+        border:
+            toastDecoration?.border ??
+            Border.all(width: 2, color: toastColorScheme.border),
+        boxShadow:
+            toastDecoration?.boxShadow ??
+            [
               BoxShadow(
                 color: toastColorScheme.shadow.withValues(alpha: 0.8),
                 blurRadius: 10,
               ),
             ],
-            color: toastColorScheme.background,
-          ),
+        color: toastDecoration?.color ?? toastColorScheme.background,
+        blendMode: toastDecoration?.blendMode,
+        borderRadius: toastDecoration?.borderRadius ?? 20,
+        decorationImage: toastDecoration?.decorationImage,
+        gradient: toastDecoration?.gradient,
+        margin: toastDecoration?.margin,
+        height: toastDecoration?.height ?? 100,
+        padding: toastDecoration?.padding,
+        width: toastDecoration?.width,
+      ),
       toastConfigure: toastConfigure,
       icon: icon,
       massage: massage,
