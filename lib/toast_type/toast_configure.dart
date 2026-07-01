@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_toast_rana/core/path/path.dart';
 
 class ToastConfigure {
   final bool isSlide, bubble;

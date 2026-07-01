@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_toast_rana/core/theme/toast_theme.dart';
-import 'package:flutter_toast_rana/massage_position/widget/massage_position_widget.dart';
-import 'package:flutter_toast_rana/toast_type/toast_configure.dart';
-import 'package:flutter_toast_rana/toast_type/toast_decoration.dart';
-import 'package:flutter_toast_rana/toast_type/toast_enum_type.dart';
+import 'package:flutter_toast_rana/core/path/path.dart';
 
 class MassagePosition extends StatelessWidget {
   final MassagePositionType positionType;

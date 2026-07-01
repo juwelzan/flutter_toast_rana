@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_toast_rana/root_toast/root_toast_widget.dart';
-import 'package:flutter_toast_rana/toast_type/toast_configure.dart';
-import 'package:flutter_toast_rana/toast_type/toast_decoration.dart';
-import 'package:flutter_toast_rana/toast_type/toast_enum_type.dart';
+import 'package:flutter_toast_rana/core/path/path.dart';
 
 class ToastGestureConfigure extends StatefulWidget {
   final VoidCallback onEnd;

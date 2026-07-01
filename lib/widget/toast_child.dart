@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-
-import '../core/theme/toast_theme.dart';
+import 'package:flutter_toast_rana/core/path/path.dart';
 
 class ToastChild extends StatelessWidget {
   final double width;
